@@ -13,3 +13,12 @@ header {
 header a {
     padding: 30px;
 }
+
+h1, h2 {
+    color: #993399;
+}
+
+img {
+    border-radius: 50%;
+    border: solid 3px #993399;
+}
