@@ -153,3 +153,8 @@ iframe {
 .card img, .card .info {
   cursor: pointer;
 }
+
+h1.not-found {
+  margin: 50px auto;
+  text-align: center;
+}
