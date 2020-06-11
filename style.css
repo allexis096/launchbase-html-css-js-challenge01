@@ -1,24 +1,155 @@
 @import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";
 
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  color: white;
+}
+
+:root {
+  --color-rocket: #7159c1;
+}
+
+a {
+  text-decoration: none;
+  font-size: 15pt;
+}
+
 body {
-    background: rgb(100, 97, 97);
-    font-family: 'Roboto', sans-serif;
-    margin: 0 auto;
+  background: #282a36;
+
+  font-family: 'Roboto', sans-serif;
 }
 
 header {
-    padding: 30px;
+  padding-bottom: 30px;
+  padding-top: 15px;
+  margin: 0 auto;
+
+  background-color: #1f212b;
+  text-align: center;
 }
 
 header a {
-    padding: 30px;
+  margin: 10px;
+  padding-top: 2px;
+  border-top: 2px solid green;
 }
 
-h1, h2 {
-    color: #993399;
+.content-about .logo img {
+  border-radius: 50%;
+  border: solid 3px var(--color-rocket);
+  margin-top: 15px;
+  width: 300px;
 }
 
-img {
-    border-radius: 50%;
-    border: solid 3px #993399;
+.content-about {
+  margin: 0 auto;
+  
+  text-align: center;
+}
+
+.content-about h1 {
+  color: var(--color-rocket);
+
+  margin: 10px;
+}
+
+.content-about h2 {
+  margin: 10px;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+
+  list-style-type: none;
+}
+
+li {
+  padding: 15px;
+  font-size: 15pt;
+}
+
+.footer {
+  margin-top: 50px;
+}
+
+.footer a {
+  border-bottom: 2px solid green;
+  margin: 10px;
+  transition: 400ms;
+}
+
+.footer a:hover {
+  color: rgb(55, 233, 55);
+}
+
+/* cards */
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  margin-top: 100px;
+
+  text-align: center;
+}
+
+.card {
+  font-size: 15pt;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+}
+
+.info p {
+  padding: 0 50px;
+}
+
+.info .price {
+  border: 1px solid #1f212b;
+  border-radius: 10%;
+}
+
+.modal {
+  width: 80%;
+  height: 80%;
+
+  background-color: white;
+
+  position: absolute;
+  top: 5vh;
+  left: 15vh;
+  visibility: hidden;
+}
+
+.modal a.close {
+  position: absolute;
+  right: 0;
+  margin-right: 2px;
+  padding: 2px;
+
+  color: red;
+  
+  cursor: pointer;
+}
+
+.active {
+  visibility: visible;
+}
+
+iframe {
+  height: 95%;
+  width: 100%;
+  position: absolute;
+  top: 5%;
+}
+
+.card img, .card .info {
+  cursor: pointer;
 }
