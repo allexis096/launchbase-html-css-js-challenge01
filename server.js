@@ -10,7 +10,7 @@ nunjucks.configure('views', {
   express: app
 })
 
-app.get('/about', function(req, res) {
+app.get('/', function(req, res) {
   return res.render('about')
 })
 
