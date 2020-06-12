@@ -8,18 +8,17 @@
 
   <div class="content-about">
     <div class="logo"><img src="rocketseat.jpg" alt="logo"></div>
-    <h1>Rocketseat</h1>
-    <h2>A empresa que decola os programadores!</h2>
+    <h1>{{ info.company }}</h1>
+    <h2>{{ info.description }}</h2>
     <ul>
-      <li>JavaScript</li>
-      <li>NodeJS</li>
-      <li>React</li>
-      <li>React Native</li>
+      {% for tech in info.techs %}
+        <li>{{ tech.name }}</li>
+      {% endfor %}
     </ul>
     <div class="footer">
-      <a href="https://www.facebook.com/rocketseat" target="_blank">Facebook</a>
-      <a href="https://www.instagram.com/rocketseat_oficial/" target="_blank">Instagram</a>
-      <a href="https://github.com/rocketseat" target="_blank">Github</a>
+      {% for link in info.links %}
+        <a href="{{ link.link_url }}" target="_blank">{{ link.name }}</a>
+      {% endfor %}
     </div>
   </div>
 
